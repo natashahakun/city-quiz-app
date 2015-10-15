@@ -9,19 +9,38 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
+  font-style: "Helvetica", "Arial", sans-serif;
+  font-size: 18px;
   -webkit-font-smoothing: antialiased;
+}
+
+.nav-bar {
+  color: #424242;
+  margin-top: 5px;
+  margin-left: 90%;
 }
 
 .game-container {
   width: 60%;
-  height: 400px;
+  height: 350px;
   margin: 0 auto;
-  margin-top: 150px;
+  margin-top: 140px;
   background-color: gray;
   opacity: .8;
 }
 
-h1 {
-  margin: 0 auto;
-  margin-top: 20px;
+.question-container {
+  padding-top: 20px;
+  text-align: center;
 }
+
+.options {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.submit {
+  color: #424242;
+}
+
