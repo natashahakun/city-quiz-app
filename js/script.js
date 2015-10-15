@@ -2,7 +2,7 @@ var currentQuestion = 0;
 
 var quiz = [
   {
-    "question number":"bla bla bla?",
+    "question":"bla bla bla?",
     "options": [
       "Option 0",
       "Option 1",
@@ -12,5 +12,9 @@ var quiz = [
     "correctAnswer": 2
   }
 ]
+
+quiz[1] = {question: "Which city has the most miles of bike lanes?", options: ["Portland", "San Diego", "Phoenix", "New York"], correctAnswer: 1}
+
+
 
 var question = quiz[currentQuestion];
