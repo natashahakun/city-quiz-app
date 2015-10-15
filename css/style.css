@@ -1,0 +1,12 @@
+body {
+  background-image: url("../images/cityscape.jpg");
+}
+
+.game-container {
+  width: 60%;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 150px;
+  background-color: gray;
+  opacity: .8;
+}
