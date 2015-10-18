@@ -14,17 +14,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.nav-bar {
-  color: #424242;
-  margin-top: 5px;
-  margin-left: 90%;
-}
-
 .game-container {
   width: 60%;
   height: 350px;
   margin: 0 auto;
-  margin-top: 140px;
+  margin-top: 150px;
   background-color: gray;
   opacity: .8;
 }
