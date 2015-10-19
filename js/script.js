@@ -15,12 +15,13 @@ var quiz = [
 
 var askQuestion = function(){
   document.getElementById("question").innerHTML = quiz[0].question;
+    for (i = 0; i < quiz[0].options.length; i++) {
+      document.getElementsByClassName("option")[i].innerHTML=quiz[0].options[i];
+  }
 }
 
 var answerQuiz = function(question){
-  for (i = 0; i < quiz.options.length; i++) {
 
-  }
 }
 
 quiz[0] = {question: "Which city has the most miles of bike lanes?", options: ["Portland", "San Diego", "Phoenix", "New York"], correctAnswer: 1}
