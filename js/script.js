@@ -20,8 +20,14 @@ var askQuestion = function(){
   }
 }
 
-var answerQuiz = function(question){
+var tally = 0;
 
+var answerQuiz = function(question){
+  var answer = document.getElementsByTagName("input")[correctAnswer];
+  if (answer.checked == true) {
+    tally += 1;
+  }
+  currentQuestion += 1;
 }
 
 quiz[0] = {questionName: "Which city has the most miles of bike lanes?", options: ["Portland", "San Diego", "Phoenix", "New York"], correctAnswer: 1}
