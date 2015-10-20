@@ -38,3 +38,9 @@ body {
   color: #424242;
 }
 
+#score {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+
