@@ -34,14 +34,15 @@ var answerQuiz = function(question){
   if (answer.checked == true) {
     console.log("Correct!")
     tally += 1;
-    document.getElementById("score").innerHTML = ("Current number correct: " + tally);
   }
   if (currentQuestion < 4) {
     currentQuestion += 1;
     question = quiz[currentQuestion];
     askQuestion(question);
+    document.getElementById("score").innerHTML = ("Current number correct: " + tally);
   } else {
       document.getElementById("score").innerHTML = ("Your score is " + tally + " out of 5!");
+      document.getElementById("question-div").style.display = "none";
   }
 }
 
