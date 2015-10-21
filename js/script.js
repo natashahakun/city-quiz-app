@@ -30,10 +30,12 @@ var askQuestion = function(question){
 }
 
 var answerQuiz = function(question){
-  var answer = document.getElementsByTagName("input")[question.correctAnswer];
+  var radios = document.getElementsByTagName("input");
+  var answer = radios[question.correctAnswer];
   if (answer.checked == true) {
     console.log("Correct!")
     tally += 1;
+    answer.checked = false;
   }
   if (currentQuestion < 4) {
     currentQuestion += 1;
@@ -43,7 +45,22 @@ var answerQuiz = function(question){
   } else {
       document.getElementById("score").innerHTML = ("Your score is " + tally + " out of 5!");
       document.getElementById("question-div").style.display = "none";
+      var playAgain = document.createElement('button');
+      playAgain.innerHTML = "Play Again";
+      document.getElementsByClassName("question-container")[0].appendChild(playAgain);
+      playAgain.addEventListener("click", function(event){
+        tally = 0;
+        currentQuestion = 0;
+        question = quiz[currentQuestion];
+        document.getElementById("question-div").style.display = "inline-block";
+        document.getElementById("score").innerHTML = "";
+        document.getElementsByClassName("question-container")[0].removeChild(playAgain);
+        askQuestion(question);
+      })
   }
+  for ( i = 0; i < radios.length; i++) {
+      radios[i].checked = false;
+    }
 }
 
 quiz[0] = {questionName: "Which city has the most miles of bike lanes?", options: ["Portland", "San Diego", "Phoenix", "New York"], correctAnswer: 1}
